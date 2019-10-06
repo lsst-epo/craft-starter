@@ -1,0 +1,177 @@
+dateModified: 1570394530
+email:
+  fromEmail: bmason@lsst.org
+  fromName: 'Craft Test'
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  409c339a-8a31-4502-88ff-699745d4b1c7:
+    name: Common
+  47e88dc9-7006-4ce9-93e1-5298b082ee77:
+    name: glossary
+fields:
+  09346b48-c0a9-4859-b361-4cf1af516c8c:
+    name: color
+    handle: color
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Color
+    settings:
+      defaultColor: ''
+    fieldGroup: 47e88dc9-7006-4ce9-93e1-5298b082ee77
+    contentColumnType: string(7)
+  1fcc38dc-6d37-45a0-9cdd-b9135ad5b280:
+    name: body
+    handle: body
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: 'Plain Text Block'
+      code: ''
+      multiline: '1'
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    fieldGroup: 409c339a-8a31-4502-88ff-699745d4b1c7
+    contentColumnType: text
+  834a5cde-aa92-461a-9ed5-8dac949aa640:
+    name: Word
+    handle: word
+    instructions: ''
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    fieldGroup: 47e88dc9-7006-4ce9-93e1-5298b082ee77
+    contentColumnType: text
+  9a0d5f37-8370-4d55-955d-63470d8208e5:
+    name: 'Raw HTML'
+    handle: rawHtml
+    instructions: ''
+    searchable: false
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: Standard.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: ''
+      removeEmptyTags: ''
+      removeNbsp: ''
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
+    fieldGroup: 409c339a-8a31-4502-88ff-699745d4b1c7
+    contentColumnType: text
+  f5adc2a7-0627-4d18-ba40-cefa99c44ac6:
+    name: Definition
+    handle: definition
+    instructions: ''
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: Standard.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
+    fieldGroup: 47e88dc9-7006-4ce9-93e1-5298b082ee77
+    contentColumnType: text
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+sections:
+  20ad811e-0b3c-40e4-9238-c9147a1c3eee:
+    name: glossary
+    handle: glossary
+    type: channel
+    enableVersioning: true
+    propagationMethod: all
+    entryTypes:
+      0e218586-625f-4575-bdf1-7e4ca768e7cb:
+        name: glossary
+        handle: glossary
+        hasTitleField: true
+        titleLabel: Word
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          c3c550a3-202a-4bad-9756-bfc5b1d1196d:
+            tabs:
+              -
+                name: glossary
+                sortOrder: 1
+                fields:
+                  09346b48-c0a9-4859-b361-4cf1af516c8c:
+                    required: false
+                    sortOrder: 1
+                  f5adc2a7-0627-4d18-ba40-cefa99c44ac6:
+                    required: false
+                    sortOrder: 2
+    siteSettings:
+      35d90821-5435-4a4a-866d-867672bcdc2a:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'glossary/{slug}'
+        template: ''
+      8a5d9c23-2157-4cc3-b624-bb8fa4a2b901:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'glossary/{slug}'
+        template: ''
+siteGroups:
+  6404f40f-63db-4a62-ab32-8cbdc8910185:
+    name: 'Craft Test'
+sites:
+  35d90821-5435-4a4a-866d-867672bcdc2a:
+    name: 'English Test'
+    handle: default
+    language: en-US
+    hasUrls: true
+    baseUrl: $DEFAULT_SITE_URL
+    sortOrder: 1
+    primary: true
+    siteGroup: 6404f40f-63db-4a62-ab32-8cbdc8910185
+  8a5d9c23-2157-4cc3-b624-bb8fa4a2b901:
+    name: 'Spanish Test'
+    handle: spanishTest
+    language: es-CL
+    hasUrls: true
+    baseUrl: $ES_SITE_URL
+    sortOrder: 2
+    primary: false
+    siteGroup: 6404f40f-63db-4a62-ab32-8cbdc8910185
+system:
+  edition: pro
+  name: 'Craft Test'
+  live: true
+  schemaVersion: 3.3.3
+  timeZone: America/Los_Angeles
+users:
+  requireEmailVerification: true
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoVolumeUid: null
+  photoSubpath: ''
