@@ -1,4 +1,4 @@
-dateModified: 1570470169
+dateModified: 1570483976
 email:
   fromEmail: bmason@lsst.org
   fromName: 'Craft Test'
@@ -8,6 +8,8 @@ fieldGroups:
     name: Common
   47e88dc9-7006-4ce9-93e1-5298b082ee77:
     name: glossary
+  eaa3a7e4-7193-49bd-bee9-e9c8f4774904:
+    name: globals
 fields:
   09346b48-c0a9-4859-b361-4cf1af516c8c:
     name: color
@@ -76,6 +78,21 @@ fields:
       availableTransforms: '*'
     fieldGroup: 409c339a-8a31-4502-88ff-699745d4b1c7
     contentColumnType: text
+  d87f8839-dbd2-4e3a-8573-baf9fdcd1f8f:
+    name: Sites
+    handle: sites
+    instructions: ''
+    searchable: false
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Matrix
+    settings:
+      minBlocks: ''
+      maxBlocks: ''
+      contentTable: '{{%matrixcontent_sites}}'
+      propagationMethod: all
+    fieldGroup: eaa3a7e4-7193-49bd-bee9-e9c8f4774904
+    contentColumnType: string
   f5adc2a7-0627-4d18-ba40-cefa99c44ac6:
     name: Definition
     handle: definition
@@ -97,6 +114,96 @@ fields:
       availableTransforms: '*'
     fieldGroup: 47e88dc9-7006-4ce9-93e1-5298b082ee77
     contentColumnType: text
+globalSets:
+  4121064e-aecb-4ff5-b4a4-221ada07a52f:
+    name: Sites
+    handle: sites
+    fieldLayouts:
+      c9109370-6b5d-4269-b557-c680a6e9e60f:
+        tabs:
+          -
+            name: globals
+            sortOrder: 1
+            fields:
+              d87f8839-dbd2-4e3a-8573-baf9fdcd1f8f:
+                required: false
+                sortOrder: 1
+matrixBlockTypes:
+  45220e09-9113-4f13-83b5-d4479735b207:
+    name: Site
+    handle: site
+    sortOrder: 1
+    field: d87f8839-dbd2-4e3a-8573-baf9fdcd1f8f
+    fieldLayouts:
+      3837dd8f-c123-4104-bb99-f58ea2f674ea:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              0ee25b02-f5fe-4c03-86c0-934467fb7924:
+                required: false
+                sortOrder: 2
+              1ef09393-6888-4a85-8837-67cdb32fff1f:
+                required: false
+                sortOrder: 1
+              d02c7279-36b1-45f5-a872-33514f1d4fa6:
+                required: false
+                sortOrder: 3
+    fields:
+      0ee25b02-f5fe-4c03-86c0-934467fb7924:
+        name: Identifier
+        handle: identifier
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Number
+        settings:
+          defaultValue: null
+          min: '0'
+          max: null
+          decimals: 0
+          size: null
+          prefix: ''
+          suffix: ''
+        fieldGroup: null
+        contentColumnType: integer(10)
+      1ef09393-6888-4a85-8837-67cdb32fff1f:
+        name: Language
+        handle: siteLanguage
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        fieldGroup: null
+        contentColumnType: text
+      d02c7279-36b1-45f5-a872-33514f1d4fa6:
+        name: Number
+        handle: number
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Number
+        settings:
+          defaultValue: null
+          min: '0'
+          max: null
+          decimals: 0
+          size: null
+          prefix: ''
+          suffix: ''
+        fieldGroup: null
+        contentColumnType: integer(10)
 plugins:
   redactor:
     edition: standard
